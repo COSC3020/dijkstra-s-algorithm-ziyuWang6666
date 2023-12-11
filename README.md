@@ -20,3 +20,12 @@ to be the most efficient one!
 
 What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+
+#### Answer: the total worst-case time complexity is $O(V^2)$, and V is the number of vertices.
+
+1. The dist, path, and visited arrays have a size equal to the number of vertices. The worst-case time complexity is $O(V)$ since it requires iterating through all vertices at once.s
+
+2. The while operation repeatedly searches for vertices that have not been visited. In the worst case, each vertex goes through this process at least once. The time complexity of the while loop is $O(V)$. The two separate loops inside the while loop also contribute to the complexity: the first one checks if the vertex is unmarked and has the minimum distance, with a time complexity of $O(V)$. The second for loop updates the distances for adjacent unvisited vertices, with a time complexity of $O(V)$. Considering these together, the total worst-case time complexity is $O(V^2)$.
+
+   
